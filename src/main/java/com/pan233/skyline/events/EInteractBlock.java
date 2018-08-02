@@ -21,7 +21,6 @@ public class EInteractBlock {
     @Listener
     public void handle(InteractBlockEvent.Secondary event, @First Player player)
     {
-        plugin.getLogger().info("右击了");
         Optional<TileEntity> sign = USignInfo.getSign(event.getTargetBlock());
         if (sign.isPresent()) {
             if (USignInfo.isPermissive(event.getTargetBlock())) {
